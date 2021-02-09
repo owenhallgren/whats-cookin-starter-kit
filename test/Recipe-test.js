@@ -15,7 +15,8 @@ describe('Recipe', function() {
   });
 
   it('should list names of ingredients needed', function() {
-    const recipe = new Recipe;
-    expect(recipe.returnIngredients).to.equal()
+    const recipe = new Recipe();
+
+    expect(recipe.returnIngredients()).to.equal([])
   })
 })
