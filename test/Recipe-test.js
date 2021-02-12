@@ -1,9 +1,9 @@
 const chai = require('chai');
 const expect = chai.expect;
-const recipes = require('../data/recipes');
-const allRecipes = recipes.recipeData;
-
-
+const recipes = require('./Data');
+const allRecipes = recipes.dummyRecipeData;
+const data = require('../test/Data')
+dummyIngredientData = data.dummyIngredientData
 const Recipe = require('../src/Recipe')
 
 describe('Recipe', function() {
@@ -36,7 +36,7 @@ describe('Recipe', function() {
 
 it('should return total cost converted to dollars', function() {
   const recipe = new Recipe(allRecipes[0]);
-  expect(recipe.returnTotalCost()).to.equal(59.21)
+  expect(recipe.returnTotalCost()).to.equal( 177.76)
 });
 
 it('should return list of instructions', function() {
