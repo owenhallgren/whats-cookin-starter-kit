@@ -42,6 +42,8 @@ addToCookButton.addEventListener('click', pushToCookList);
 myPantryButton.addEventListener('click', displayPantryIngredients)
 recipeToBeCookedButton.addEventListener('click', cookRecipe)
 
+pantry.returnPantryIngredients(ingredientsData, recipeData)
+
 function loadAllRecipes() {
   createRecipes();
   createIngredients();
