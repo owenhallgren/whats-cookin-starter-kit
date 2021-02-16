@@ -38,7 +38,7 @@ class Pantry {
 		let ingredientOnHand = this.ingredients.find(pantryIngredient => missingIngredient.id === pantryIngredient.ingredient);
 
 		if(ingredientOnHand) {
-			qtyOnHand = ingredientOnHand.quantity.amount;
+			qtyOnHand = ingredientOnHand.amount;
 		}
     let missingIngredientName = ingredientsData.find(ingredient => ingredient.id === missingIngredient.id).name
 		let missingAmount = missingIngredient.quantity.amount - qtyOnHand;
