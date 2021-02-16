@@ -4,10 +4,10 @@ class Pantry {
     this.canCook = false;
   }
 
-  returnPantryIngredients(x, recipes) {
+  returnPantryIngredients() {
     let ingredientInfo = this.ingredients.map(ingredient => {
-      let ingredientName = x.find(y => ingredient.ingredient === y.id)
-      let recipeUnit = recipes.reduce((acc, current) => {
+      let ingredientName = ingredientsData.find(y => ingredient.ingredient === y.id)
+      let recipeUnit = recipeData.reduce((acc, current) => {
         current.ingredients.forEach(r => {
           if(r.id === ingredient.ingredient) {
             acc = r.quantity.unit;
@@ -15,9 +15,8 @@ class Pantry {
         })
         return acc;
       }, "")
-      return `${ingredient.amount} ${ingredientName.name} ${recipeUnit}`
+      return ` ${ingredient.amount} ${ingredientName.name} ${recipeUnit}`
     })
-    console.log(ingredientInfo)
     return ingredientInfo
   }
 

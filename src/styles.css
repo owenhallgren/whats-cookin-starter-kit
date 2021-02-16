@@ -15,17 +15,35 @@ h1, h2 {
 h2 {
   margin-bottom: 10px;
   padding-top: 0;
-  padding-bottom: 5px;  
+  padding-bottom: 5px;
 }
 
 .all-recipes {
   display: flex;
-  background-color: red;
+  background-color: #D0D0D0;
   height: 100%;
   width: 90%;
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.button-spacing {
+ margin-right: 10px;
+}
+
+.random-recipe, .all-recipes-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .filter-recipe-button {
