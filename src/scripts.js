@@ -1,4 +1,4 @@
-const user = new User(usersData[0]);
+const user = new User(chooseRandomUser());
 const pantry = new Pantry(user.pantry)
 const allRecipesArray = [];
 const allIngredientsArray = [];
@@ -42,7 +42,7 @@ addToCookButton.addEventListener('click', pushToCookList);
 myPantryButton.addEventListener('click', displayPantryHelper)
 recipeToBeCookedButton.addEventListener('click', cookRecipe)
 
-pantry.returnPantryIngredients()
+pantry.returnPantryIngredients(ingredientsData, recipeData)
 
 function loadAllRecipes() {
   createRecipes();
@@ -65,7 +65,7 @@ function cookRecipe() {
 }
 
 function displayUserName() {
-  nameDisplay.innerText = `${user.name}`
+  nameDisplay.innerText = `Welcome, ${user.name}!`
 }
 
 function displayPantryHelper() {
@@ -286,7 +286,6 @@ function displayPantryIngredients() {
   allRecipesPage.innerHTML = "";
   allRecipesPage.classList.toggle("hidden")
   allRecipesPage.innerText = pantry.returnPantryIngredients();
-
 }
 
 function pushToFavorites() {
