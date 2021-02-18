@@ -79,10 +79,6 @@ transition: all 0.3s ease 0s;
   position: relative;
 }
 
-.hidden {
-  display: none;
-}
-
 .recipe-card {
   display: block;
   text-align: center;
@@ -150,4 +146,8 @@ transition: all 0.3s ease 0s;
     margin: 10px;
     position: relative;
   }
+}
+
+.hidden {
+  display: none;
 }
